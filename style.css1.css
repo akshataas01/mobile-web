@@ -1,0 +1,102 @@
+/* 1. Global Reset & Mobile Baseline */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 16px;
+    /* Highly legible on mobile */
+    line-height: 1.5;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* 2. Mobile Layout (Single Column) */
+header {
+    background-color: #111;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    display: inline-block;
+    padding: 10px;
+    /* Large tap targets for fingers */
+}
+
+main {
+    padding: 20px;
+}
+
+.hero {
+    text-align: center;
+    padding: 40px 10px;
+    background: #eef2f3;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.cta-btn {
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 15px;
+    width: 100%;
+    /* Spans full width on mobile for easy clicking */
+    max-width: 300px;
+}
+
+/* Stack cards vertically on mobile */
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* 3. Desktop Adjustments (Screens wider than 768px) */
+@media (min-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+    }
+
+    .cta-btn {
+        width: auto;
+        /* Shrinks back to natural size on desktop */
+    }
+
+    .features {
+        flex-direction: row;
+        /* Switch columns to horizontal rows on desktop */
+    }
+
+    .card {
+        flex: 1;
+    }
+}
